@@ -118,3 +118,99 @@
 
 - 21.h
   `sum`関数と`product`関数のプロトタイプ宣言を記述する。
+
+## 2
+
+4限実施分
+
+3次元空間の2点の座標を入力する関数`point_input`を作成せよ。\
+3次元空間の２点間の中点を求める関数`mid_point`を作成せよ。\
+3次元空間の2点の座標を出力する関数`print_point`を作成せよ。
+
+ただし、3次元空間の座標はpoint_t型の構造体で表すものとする。
+
+```c
+struct typedef
+{
+  double x, y, z;
+} point_t;
+```
+
+- 02_main.c
+
+  ``` c
+  #include <stdio.h>
+  #include "02.h"
+
+  int main()
+  {
+    point_t *p1, *p2, *mid;
+
+    // 点p1を入力する
+    input_point(p1);
+
+    // 点p2を入力する
+    input_point(p2);
+
+    // 点p1とp2の中点を計算する
+    mid_point(p1, p2, mid);
+
+    // 中点を出力する
+    output_point(p1);
+    output_point(p2);
+    output_point(mid);
+
+    return 0;
+  }
+  ```
+
+- 02.c
+  `input_point`関数と`mid_point`関数、`output_point`関数の本体を記述する。
+
+- 02.h
+  point_t型の構造体の定義を記述する。
+
+  `input_point`関数と`mid_point`関数、`output_point`関数のプロトタイプ宣言を記述する。
+
+## 2 改1
+
+1限実施分
+
+学生の情報を入力する関数 `input_student` を作成せよ。\
+学生の情報を表示する関数 `print_student` を作成せよ。\
+
+ただし、学生の情報は student_t 型の構造体で表すものとする。
+
+```c
+typedef struct
+{
+  char name[32];
+  int age;
+  double score;
+} student_t;
+```
+
+- 12_main.c
+
+  ``` c
+  #include <stdio.h>
+  #include "12.h"
+
+  int main()
+  {
+    student_t s;
+
+    input_student(&s);
+    output_student(&s);
+
+    return 0;
+  }
+  ```
+
+- 02.c
+  `input_point`関数と`mid_point`関数、`output_point`関数の本体を記述する。
+
+- 02.h
+  point_t型の構造体の定義を記述する。
+
+  `input_point`関数と`mid_point`関数、`output_point`関数のプロトタイプ宣言を記述する。
